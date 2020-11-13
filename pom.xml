@@ -55,8 +55,38 @@
     <artifactId>xjavamail</artifactId>
 	<version>0.1</version>
     <packaging>jar</packaging>
-    <name>JavaMail API</name>
+    <name>XJavaMail API</name>
 
+	<licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+<developers>
+  <developer>
+   <name>gulilan</name>
+   <email>gulilan_2011@yahoo.com</email>
+   <organization>iotgw inc.</organization>
+   <organizationUrl>https://github.com/xjavamail</organizationUrl>
+  </developer>
+ </developers>
+ <scm>
+ <connection>scm:git:git@github.com:xjavamail/javamail.git</connection>
+  <developerConnection>scm:git:ssh://github.com:xjavamail/javamail.git</developerConnection>
+  <url>https://github.com/xjavamail</url>
+ </scm>
+
+ <distributionManagement>
+  <snapshotRepository>
+   <id>ossrh</id>
+   <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+  </snapshotRepository>
+  <repository>
+   <id>ossrh</id>
+   <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+  </repository>
+ </distributionManagement>
     <properties>
 	<mail.extensionName>
 	    javax.mail
@@ -65,7 +95,7 @@
 	    java.mail
 	</mail.moduleName>
 	<mail.specificationTitle>
-	    JavaMail(TM) API Design Specification 
+	    JavaMail(TM) API Design Specification (X)
 		
 	</mail.specificationTitle>
 	<mail.implementationTitle>
@@ -100,7 +130,7 @@
 	    the former requires JDK 1.8 and the latter depends on the former.
 	-->
 	<profile>
-	    <id>1.7</id>
+	    <id>1.8</id>
 	    <build>
 		<plugins>
 		    <plugin>
@@ -131,7 +161,7 @@
 	<!--
 	    A special profile used when compiling with the real JDK 9 compiler.
 	    Override the release setting from the parent's "9" profile so
-	    that we produce JDK 1.7 compatible class files.
+	    that we produce JDK 1.8 compatible class files.
 	-->
 	<profile>
 	    <id>9</id>
@@ -174,8 +204,8 @@
 	    <plugin>
 		<artifactId>maven-compiler-plugin</artifactId>
 		<configuration>
-		    <source>1.7</source>
-		    <target>1.7</target>
+		    <source>1.8</source>
+		    <target>1.8</target>
 		    <compilerArgs>
 			<arg>-Xlint</arg>
 			<arg>-Xlint:-options</arg>
@@ -221,6 +251,47 @@
 		    </archive>
 		</configuration>
 	    </plugin>
+
+			 <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-source-plugin</artifactId>
+    <version>2.2.1</version>
+    <executions>
+     <execution>
+      <id>attach-sources</id>
+      <goals>
+       <goal>jar-no-fork</goal>
+      </goals>
+     </execution>
+    </executions>
+   </plugin>
+   <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-javadoc-plugin</artifactId>
+    <version>2.9.1</version>
+    <executions>
+     <execution>
+      <id>attach-javadocs</id>
+      <goals>
+       <goal>jar</goal>
+      </goals>
+     </execution>
+    </executions>
+   </plugin>
+   <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-gpg-plugin</artifactId>
+    <version>1.5</version>
+    <executions>
+     <execution>
+      <id>sign-artifacts</id>
+      <phase>verify</phase>
+      <goals>
+       <goal>sign</goal>
+      </goals>
+     </execution>
+    </executions>
+   </plugin>
 	</plugins>
     </build>
 
