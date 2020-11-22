@@ -53,6 +53,8 @@ import com.sun.mail.util.SocketFetcher;
 import com.sun.mail.util.LineInputStream;
 import com.sun.mail.util.TraceInputStream;
 import com.sun.mail.util.TraceOutputStream;
+
+
 import com.sun.mail.util.SharedByteArrayOutputStream;
 
 class Response {
@@ -69,6 +71,7 @@ class Response {
  *
  * @author      Bill Shannon
  */
+
 class Protocol {
     private Socket socket;		// POP3 socket
     private String host;		// host we're connected to
@@ -726,6 +729,9 @@ class Protocol {
     private Response simpleCommand(String cmd) throws IOException {
 	simpleCommandStart(cmd);
 	issueCommand(cmd);
+	
+
+	
 	Response r = readResponse();
 	simpleCommandEnd();
 	return r;
@@ -739,6 +745,7 @@ class Protocol {
 	    throw new IOException("Folder is closed");	// XXX
 
 	if (cmd != null) {
+		//traceLogger.fine("send cmd:"+cmd);
 	    cmd += CRLF;
 	    output.print(cmd);	// do it in one write
 	    output.flush();
@@ -780,6 +787,7 @@ class Protocol {
 	    traceLogger.finest("<EOF>");
 	    throw new EOFException("EOF on socket");
 	}
+	//traceLogger.finest(line);
 	Response r = new Response();
 	if (line.startsWith("+OK"))
 	    r.ok = true;

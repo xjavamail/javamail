@@ -1,311 +1,288 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!--
-
-    DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
-
-    Copyright (c) 1997-2018 Oracle and/or its affiliates. All rights reserved.
-
-    The contents of this file are subject to the terms of either the GNU
-    General Public License Version 2 only ("GPL") or the Common Development
-    and Distribution License("CDDL") (collectively, the "License").  You
-    may not use this file except in compliance with the License.  You can
-    obtain a copy of the License at
-    https://oss.oracle.com/licenses/CDDL+GPL-1.1
-    or LICENSE.txt.  See the License for the specific
-    language governing permissions and limitations under the License.
-
-    When distributing the software, include this License Header Notice in each
-    file and include the License file at LICENSE.txt.
-
-    GPL Classpath Exception:
-    Oracle designates this particular file as subject to the "Classpath"
-    exception as provided by Oracle in the GPL Version 2 section of the License
-    file that accompanied this code.
-
-    Modifications:
-    If applicable, add the following below the License Header, with the fields
-    enclosed by brackets [] replaced by your own identifying information:
-    "Portions Copyright [year] [name of copyright owner]"
-
-    Contributor(s):
-    If you wish your version of this file to be governed by only the CDDL or
-    only the GPL Version 2, indicate your decision by adding "[Contributor]
-    elects to include this software in this distribution under the [CDDL or GPL
-    Version 2] license."  If you don't indicate a single choice of license, a
-    recipient has the option to distribute your version of this file under
-    either the CDDL, the GPL Version 2 or to extend the choice of license to
-    its licensees as provided above.  However, if you add GPL Version 2 code
-    and therefore, elected the GPL Version 2 license, then the option applies
-    only if the new code is made subject to such option by the copyright
-    holder.
-
--->
+<!-- DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER. Copyright (c) 
+	1997-2018 Oracle and/or its affiliates. All rights reserved. The contents 
+	of this file are subject to the terms of either the GNU General Public License 
+	Version 2 only ("GPL") or the Common Development and Distribution License("CDDL") 
+	(collectively, the "License"). You may not use this file except in compliance 
+	with the License. You can obtain a copy of the License at https://oss.oracle.com/licenses/CDDL+GPL-1.1 
+	or LICENSE.txt. See the License for the specific language governing permissions 
+	and limitations under the License. When distributing the software, include 
+	this License Header Notice in each file and include the License file at LICENSE.txt. 
+	GPL Classpath Exception: Oracle designates this particular file as subject 
+	to the "Classpath" exception as provided by Oracle in the GPL Version 2 section 
+	of the License file that accompanied this code. Modifications: If applicable, 
+	add the following below the License Header, with the fields enclosed by brackets 
+	[] replaced by your own identifying information: "Portions Copyright [year] 
+	[name of copyright owner]" Contributor(s): If you wish your version of this 
+	file to be governed by only the CDDL or only the GPL Version 2, indicate 
+	your decision by adding "[Contributor] elects to include this software in 
+	this distribution under the [CDDL or GPL Version 2] license." If you don't 
+	indicate a single choice of license, a recipient has the option to distribute 
+	your version of this file under either the CDDL, the GPL Version 2 or to 
+	extend the choice of license to its licensees as provided above. However, 
+	if you add GPL Version 2 code and therefore, elected the GPL Version 2 license, 
+	then the option applies only if the new code is made subject to such option 
+	by the copyright holder. -->
 
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
 			    http://maven.apache.org/maven-v4_0_0.xsd">
-    <parent>
-	<groupId>com.sun.mail</groupId>
-	<artifactId>all</artifactId>
-	<version>1.6.2</version>
-    </parent>
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>net.iotgw</groupId>
-    <artifactId>xjavamail</artifactId>
+	<parent>
+		<groupId>com.sun.mail</groupId>
+		<artifactId>all</artifactId>
+		<version>1.6.2</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>net.iotgw</groupId>
+	<artifactId>xjavamail</artifactId>
 	<version>0.1</version>
-    <packaging>jar</packaging>
-    <name>XJavaMail API</name>
+	<packaging>jar</packaging>
+	<name>XJavaMail API</name>
 
 	<licenses>
-    <license>
-      <name>The Apache Software License, Version 2.0</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-    </license>
-  </licenses>
-<developers>
-  <developer>
-   <name>gulilan</name>
-   <email>gulilan_2011@yahoo.com</email>
-   <organization>iotgw inc.</organization>
-   <organizationUrl>https://github.com/xjavamail</organizationUrl>
-  </developer>
- </developers>
- <scm>
- <connection>scm:git:git@github.com:xjavamail/javamail.git</connection>
-  <developerConnection>scm:git:ssh://github.com:xjavamail/javamail.git</developerConnection>
-  <url>https://github.com/xjavamail</url>
- </scm>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<name>gulilan</name>
+			<email>gulilan_2011@yahoo.com</email>
+			<organization>iotgw inc.</organization>
+			<organizationUrl>https://github.com/xjavamail</organizationUrl>
+		</developer>
+	</developers>
+	<scm>
+		<connection>scm:git:git@github.com:xjavamail/javamail.git</connection>
+		<developerConnection>scm:git:ssh://github.com:xjavamail/javamail.git</developerConnection>
+		<url>https://github.com/xjavamail</url>
+	</scm>
 
- <distributionManagement>
-  <snapshotRepository>
-   <id>ossrh</id>
-   <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-  </snapshotRepository>
-  <repository>
-   <id>ossrh</id>
-   <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-  </repository>
- </distributionManagement>
-    <properties>
-	<mail.extensionName>
-	    javax.mail
-	</mail.extensionName>
-	<mail.moduleName>
-	    java.mail
-	</mail.moduleName>
-	<mail.specificationTitle>
-	    JavaMail(TM) API Design Specification (X)
-		
-	</mail.specificationTitle>
-	<mail.implementationTitle>
-	    javax.mail
-	</mail.implementationTitle>
-	<mail.packages.export>
-	    javax.mail.*; version=${mail.spec.version},
-	    com.sun.mail.imap; version=${mail.osgiversion},
-	    com.sun.mail.imap.protocol; version=${mail.osgiversion},
-	    com.sun.mail.iap; version=${mail.osgiversion},
-	    com.sun.mail.pop3; version=${mail.osgiversion},
-	    com.sun.mail.smtp; version=${mail.osgiversion},
-	    com.sun.mail.util; version=${mail.osgiversion},
-	    com.sun.mail.util.logging; version=${mail.osgiversion},
-	    com.sun.mail.handlers; version=${mail.osgiversion}
-	</mail.packages.export>
-	<mail.probeFile>
-	    META-INF/gfprobe-provider.xml
-	</mail.probeFile>
-	<findbugs.skip>
-	    false
-	</findbugs.skip>
-	<findbugs.exclude>
-	    ${project.basedir}/exclude.xml
-	</findbugs.exclude>
-    </properties>
+	<distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+		<repository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+	</distributionManagement>
+	<properties>
+		<mail.extensionName>
+			javax.mail
+		</mail.extensionName>
+		<mail.moduleName>
+			java.mail
+		</mail.moduleName>
+		<mail.specificationTitle>
+			JavaMail(TM) API Design Specification (X)
 
-    <profiles>
-	<!--
-	    A special profile for compiling with the real JDK 1.7 compiler.
-	    Exclude MailSessionDefinition and MailSessionDefinitions since
-	    the former requires JDK 1.8 and the latter depends on the former.
-	-->
-	<profile>
-	    <id>1.8</id>
-	    <build>
+		</mail.specificationTitle>
+		<mail.implementationTitle>
+			javax.mail
+		</mail.implementationTitle>
+		<mail.packages.export>
+			javax.mail.*; version=${mail.spec.version},
+			com.sun.mail.imap; version=${mail.osgiversion},
+			com.sun.mail.imap.protocol; version=${mail.osgiversion},
+			com.sun.mail.iap; version=${mail.osgiversion},
+			com.sun.mail.pop3; version=${mail.osgiversion},
+			com.sun.mail.smtp; version=${mail.osgiversion},
+			com.sun.mail.util; version=${mail.osgiversion},
+			com.sun.mail.util.logging; version=${mail.osgiversion},
+			com.sun.mail.handlers; version=${mail.osgiversion}
+		</mail.packages.export>
+		<mail.probeFile>
+			META-INF/gfprobe-provider.xml
+		</mail.probeFile>
+		<findbugs.skip>
+			false
+		</findbugs.skip>
+		<findbugs.exclude>
+			${project.basedir}/exclude.xml
+		</findbugs.exclude>
+	</properties>
+
+	<profiles>
+		<!-- A special profile for compiling with the real JDK 1.7 compiler. Exclude 
+			MailSessionDefinition and MailSessionDefinitions since the former requires 
+			JDK 1.8 and the latter depends on the former. -->
+		<profile>
+			<id>1.8</id>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>default-compile</id>
+								<configuration>
+									<excludes>
+										<exclude>
+											javax/mail/MailSessionDefinition.java
+										</exclude>
+										<exclude>
+											javax/mail/MailSessionDefinitions.java
+										</exclude>
+										<exclude>
+											module-info.java
+										</exclude>
+									</excludes>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<!-- A special profile used when compiling with the real JDK 9 compiler. 
+			Override the release setting from the parent's "9" profile so that we produce 
+			JDK 1.8 compatible class files. -->
+		<profile>
+			<id>9</id>
+			<activation>
+				<jdk>9</jdk>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>default-compile</id>
+								<configuration>
+									<release combine.self="override"></release>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
 		<plugins>
-		    <plugin>
-			<artifactId>maven-compiler-plugin</artifactId>
-			<executions>
-			    <execution>
-				<id>default-compile</id>
+			<!-- Configure compiler plugin to print lint warnings. Need to exclude 
+				options warning because bootstrap classpath isn't set (on purpose). Need 
+				to exclude path warnings because Maven includes source directories that don't 
+				exist (e.g., generated-sources). -->
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-				    <excludes>
-					<exclude>
-					  javax/mail/MailSessionDefinition.java
-					</exclude>
-					<exclude>
-					  javax/mail/MailSessionDefinitions.java
-					</exclude>
-					<exclude>
-					  module-info.java
-					</exclude>
-				    </excludes>
+					<source>1.8</source>
+					<target>1.8</target>
+					<compilerArgs>
+						<arg>-Xlint</arg>
+						<arg>-Xlint:-options</arg>
+						<arg>-Xlint:-path</arg>
+						<!-- <arg>-Werror</arg> -->
+					</compilerArgs>
+					<showDeprecation>true</showDeprecation>
+					<showWarnings>true</showWarnings>
+					<excludes>
+						<exclude>
+							module-info.java
+						</exclude>
+					</excludes>
 				</configuration>
-			    </execution>
-			</executions>
-		    </plugin>
-		</plugins>
-	    </build>
-	</profile>
+			</plugin>
 
-	<!--
-	    A special profile used when compiling with the real JDK 9 compiler.
-	    Override the release setting from the parent's "9" profile so
-	    that we produce JDK 1.8 compatible class files.
-	-->
-	<profile>
-	    <id>9</id>
-	    <activation>
-		<jdk>9</jdk>
-	    </activation>
-	    <build>
-		<plugins>
-		    <plugin>
-			<artifactId>maven-compiler-plugin</artifactId>
-			<executions>
-			    <execution>
-				<id>default-compile</id>
+			<!-- Configure test plugin to find *TestSuite classes. -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
 				<configuration>
-				    <release combine.self="override"></release>
+					<includes>
+						<include>**/*Test.java</include>
+						<include>**/*TestSuite.java</include>
+					</includes>
 				</configuration>
-			    </execution>
-			</executions>
-		    </plugin>
+			</plugin>
+
+			<!-- Add the Automatic-Module-Name manifest header for JDK 9. -->
+			<plugin>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifestEntries>
+							<Automatic-Module-Name>
+								${mail.moduleName}
+							</Automatic-Module-Name>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<version>1.5</version>
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
-	    </build>
-	</profile>
-    </profiles>
+	</build>
 
-    <build>
-	<resources>
-	    <resource>
-		<directory>src/main/resources</directory>
-		<filtering>true</filtering>
-	    </resource>
-	</resources>
-	<plugins>
-	    <!--
-		Configure compiler plugin to print lint warnings.
-		Need to exclude options warning because bootstrap
-		classpath isn't set (on purpose).
-		Need to exclude path warnings because Maven includes
-		source directories that don't exist (e.g., generated-sources).
-	    -->
-	    <plugin>
-		<artifactId>maven-compiler-plugin</artifactId>
-		<configuration>
-		    <source>1.8</source>
-		    <target>1.8</target>
-		    <compilerArgs>
-			<arg>-Xlint</arg>
-			<arg>-Xlint:-options</arg>
-			<arg>-Xlint:-path</arg>
-<!-- 			<arg>-Werror</arg> -->
-		    </compilerArgs>
-		    <showDeprecation>true</showDeprecation>
-		    <showWarnings>true</showWarnings>
-		    <excludes>
-			<exclude>
-			  module-info.java
-			</exclude>
-		    </excludes>
-		</configuration>
-	    </plugin>
-
-	    <!--
-		Configure test plugin to find *TestSuite classes.
-	    -->
-	    <plugin>
-		<groupId>org.apache.maven.plugins</groupId>
-		<artifactId>maven-surefire-plugin</artifactId>
-		<configuration>
-		    <includes>
-			<include>**/*Test.java</include>
-			<include>**/*TestSuite.java</include>
-		    </includes>
-		</configuration>
-	    </plugin>
-
-	    <!--
-		Add the Automatic-Module-Name manifest header for JDK 9.
-	    -->
-	    <plugin>
-		<artifactId>maven-jar-plugin</artifactId>
-		<configuration>
-		    <archive>
-			<manifestEntries>
-			    <Automatic-Module-Name>
-				${mail.moduleName}
-			    </Automatic-Module-Name>
-			</manifestEntries>
-		    </archive>
-		</configuration>
-	    </plugin>
-
-			 <plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-source-plugin</artifactId>
-    <version>2.2.1</version>
-    <executions>
-     <execution>
-      <id>attach-sources</id>
-      <goals>
-       <goal>jar-no-fork</goal>
-      </goals>
-     </execution>
-    </executions>
-   </plugin>
-   <plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-javadoc-plugin</artifactId>
-    <version>2.9.1</version>
-    <executions>
-     <execution>
-      <id>attach-javadocs</id>
-      <goals>
-       <goal>jar</goal>
-      </goals>
-     </execution>
-    </executions>
-   </plugin>
-   <plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-gpg-plugin</artifactId>
-    <version>1.5</version>
-    <executions>
-     <execution>
-      <id>sign-artifacts</id>
-      <phase>verify</phase>
-      <goals>
-       <goal>sign</goal>
-      </goals>
-     </execution>
-    </executions>
-   </plugin>
-	</plugins>
-    </build>
-
-    <dependencies>
-	<dependency>
-	    <groupId>javax.activation</groupId>
-	    <artifactId>activation</artifactId>
-	</dependency>
-	<dependency>
-	    <groupId>junit</groupId>
-	    <artifactId>junit</artifactId>
-	    <version>4.12</version>
-	    <scope>test</scope>
-	    <optional>true</optional>
-	</dependency>
-    </dependencies>
+	<dependencies>
+		<dependency>
+			<groupId>javax.activation</groupId>
+			<artifactId>activation</artifactId>
+		</dependency>
+<!-- 		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
+			<optional>true</optional>
+			<version>1.18.12</version>
+		</dependency> -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+			<optional>true</optional>
+		</dependency>
+	</dependencies>
 </project>
