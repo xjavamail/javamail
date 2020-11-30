@@ -55,6 +55,7 @@ import javax.mail.internet.*;
 import javax.mail.event.*;
 import com.sun.mail.util.ReadableMime;
 
+
 /**
  * A POP3 Message. Just like a MimeMessage except that some things are not
  * supported.
@@ -365,17 +366,19 @@ public class POP3Message extends MimeMessage implements ReadableMime {
 		}
 
 		String receiveds[] = getHeader("Received");
-		if (receiveds.length == 0) {
+		
+		if (receiveds==null || receiveds.length == 0) {
 			return null;
 		}
 
 		String received = receiveds[0];
 		String recvDateText = received.substring(received.indexOf(';') + 1).trim();
 		// 29 len for 'EEE, dd MMM YYYY HH:mm:ss ZZZ'
+		
 		if (recvDateText.length() < 29) {
 			return null;
 		}
-		DateFormat df = new SimpleDateFormat("EEE, dd MMM YYYY HH:mm:ss ZZZ", Locale.US);
+		DateFormat df = new SimpleDateFormat("EEE, dd LLL yyyy HH:mm:ss ZZZ", Locale.US);
 		try {
 			Date d = df.parse(recvDateText);
 			return d;
