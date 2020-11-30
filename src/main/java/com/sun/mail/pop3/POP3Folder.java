@@ -43,6 +43,8 @@ package com.sun.mail.pop3;
 import javax.mail.*;
 import javax.mail.event.*;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.LineNumberReader;
 import java.io.IOException;
 import java.io.EOFException;
 import java.util.StringTokenizer;
@@ -492,6 +494,23 @@ public class POP3Folder extends Folder {
 	    throw new MessagingException("error getting UIDL", ex);
 	}
     }
+    
+    public synchronized String getUID(int msgNum) throws MessagingException {
+    	checkOpen();
+
+    	try {
+    	    if (!store.supportsUidl)
+    		return null;
+    	    
+    		String uid = port.uidl(msgNum);
+    	    return uid;
+    	} catch (EOFException eex) {
+    	    close(false);
+    	    throw new FolderClosedException(this, eex.toString());
+    	} catch (IOException ex) {
+    	    throw new MessagingException("error getting UIDL", ex);
+    	}
+        }
 
     /**
      * Return the size of this folder, as was returned by the POP3 STAT
@@ -564,6 +583,26 @@ public class POP3Folder extends Folder {
 	checkOpen();
 	return port.list();
     }
+    
+//    public synchronized List<Integer> listCommandInt()
+//			throws MessagingException, IOException {
+//    	checkOpen();
+//    	InputStream input = port.list();
+//    	try {
+//    		LineNumberReader reader = new LineNumberReader(new InputStreamReader(input));
+//    		String s;
+//    		ArrayList<Integer> list = new ArrayList<Integer>();
+//    		while ((s=reader.readLine())!=null) {
+//    			list.add(Integer.parseInt(s.split(" ")[0]));
+//    		}
+//    		return list;
+//    	}
+//    	catch(Exception e)
+//    	{
+//    		e.printStackTrace(System.err);
+//    	}
+//    	return null;
+//    }
 
     /**
      * Close the folder when we're finalized.

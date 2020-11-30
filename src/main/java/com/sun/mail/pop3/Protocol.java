@@ -239,6 +239,7 @@ class Protocol {
 	    }
 		//force enable UIDL
 	    capabilities.put("UIDL","UIDL");
+	    capabilities.put("TOP","TOP");
 	} catch (IOException ex) {
 	    // should never happen
 	} finally {
@@ -622,7 +623,7 @@ class Protocol {
     /**
      * Return the UIDL string for the message.
      */
-    synchronized String uidl(int msg) throws IOException {
+    synchronized  String uidl(int msg) throws IOException {
 	Response r = simpleCommand("UIDL " + msg);
 	if (!r.ok)
 	    return null;
