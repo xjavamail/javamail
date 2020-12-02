@@ -43,18 +43,13 @@ package com.sun.mail.pop3;
 import java.io.*;
 import java.util.Date;
 import java.util.Enumeration;
-import java.util.Locale;
 import java.util.logging.Level;
 import java.lang.ref.SoftReference;
-import java.text.DateFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-
 import javax.mail.*;
 import javax.mail.internet.*;
 import javax.mail.event.*;
 import com.sun.mail.util.ReadableMime;
-
 
 /**
  * A POP3 Message. Just like a MimeMessage except that some things are not
@@ -64,6 +59,7 @@ import com.sun.mail.util.ReadableMime;
  */
 public class POP3Message extends MimeMessage implements ReadableMime {
 
+	private static final MailDateFormat receivedDateFormat = new MailDateFormat();
 	/*
 	 * Our locking strategy is to always lock the POP3Folder before the POP3Message
 	 * so we have to be careful to drop our lock before calling back to the folder
@@ -366,24 +362,28 @@ public class POP3Message extends MimeMessage implements ReadableMime {
 		}
 
 		String receiveds[] = getHeader("Received");
-		
-		if (receiveds==null || receiveds.length == 0) {
+
+		if (receiveds == null || receiveds.length == 0) {
 			return null;
 		}
 
 		String received = receiveds[0];
 		String recvDateText = received.substring(received.indexOf(';') + 1).trim();
 		// 29 len for 'EEE, dd MMM YYYY HH:mm:ss ZZZ'
-		
-		if (recvDateText.length() < 29) {
+
+		if ( recvDateText==null ) {
 			return null;
 		}
-		DateFormat df = new SimpleDateFormat("EEE, dd LLL yyyy HH:mm:ss ZZZ", Locale.US);
+
+
+
 		try {
-			Date d = df.parse(recvDateText);
-			return d;
+			synchronized (receivedDateFormat) {
+				Date d = receivedDateFormat.parse(recvDateText);
+				return d;
+			}
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 
