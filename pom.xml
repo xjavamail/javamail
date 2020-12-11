@@ -36,7 +36,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.iotgw</groupId>
 	<artifactId>xjavamail</artifactId>
-	<version>0.1.4</version>
+	<version>0.1.5</version>
 	<packaging>jar</packaging>
 	<name>XJavaMail API</name>
 

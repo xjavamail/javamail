@@ -233,6 +233,27 @@ public class POP3Folder extends Folder {
 		}
 	    }
 	    opened = true;
+	    InputStream listInput = listCommand();
+		int listTotal = 0;
+		try {
+			LineNumberReader reader = new LineNumberReader(new InputStreamReader(listInput));
+			String line;
+			
+			while ((line=reader.readLine())!=null) {
+				if (line.trim().equals(".")) {
+					break;
+				}
+				listTotal++;
+			}
+			
+		}catch(Exception e)
+		{
+			
+		}
+		if (listTotal>total) {
+			total=listTotal;
+		}
+	   
 	} catch (IOException ioex) {
 	    try {
 		if (port != null)
