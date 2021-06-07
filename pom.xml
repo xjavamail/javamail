@@ -36,7 +36,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.iotgw</groupId>
 	<artifactId>xjavamail</artifactId>
-	<version>0.1.5</version>
+	<version>0.1.6</version>
 	<packaging>jar</packaging>
 	<name>XJavaMail API</name>
 
@@ -236,7 +236,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
+			<!-- <plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<executions>
@@ -247,8 +247,8 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
-			<plugin>
+			</plugin> -->
+			<!-- <plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-gpg-plugin</artifactId>
 				<version>1.5</version>
@@ -261,7 +261,7 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin> -->
 		</plugins>
 	</build>
 

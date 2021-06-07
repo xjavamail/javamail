@@ -516,6 +516,21 @@ public class POP3Folder extends Folder {
 	}
     }
     
+    public synchronized InputStream top(int msg,int n) throws MessagingException {
+    	checkOpen();
+    	
+    	try {
+    	   
+    		InputStream input = port.top(msg, n);
+    	    return input;
+    	} catch (EOFException eex) {
+    	    close(false);
+    	    throw new FolderClosedException(this, eex.toString());
+    	} catch (IOException ex) {
+    	    throw new MessagingException("error getting UIDL", ex);
+    	}
+        }
+    
     public synchronized String getUID(int msgNum) throws MessagingException {
     	checkOpen();
 
@@ -671,7 +686,7 @@ public class POP3Folder extends Folder {
      * objects so that they will fail appropriately when the folder
      * is closed.
      */
-    Protocol getProtocol() throws MessagingException {
+    public Protocol getProtocol() throws MessagingException {
 	Protocol p = port;	// read it before close() can set it to null
 	checkOpen();
 	// close() might happen here

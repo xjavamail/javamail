@@ -602,6 +602,7 @@ public class InternetHeaders {
 	    if (!addReverse && h.getName().equals(":"))
 		pos = i;
 	}
+	System.out.println("-----add header:"+name);
 	headers.add(pos, new InternetHeader(name, value));
     }
 
