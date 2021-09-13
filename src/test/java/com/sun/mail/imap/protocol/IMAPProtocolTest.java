@@ -44,6 +44,10 @@ import java.io.*;
 import java.nio.charset.Charset;
 import java.util.Properties;
 import com.sun.mail.test.AsciiStringInputStream;
+
+import net.iotgw.mail.imap.protocol.BODY;
+import net.iotgw.mail.imap.protocol.IMAPProtocol;
+
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 

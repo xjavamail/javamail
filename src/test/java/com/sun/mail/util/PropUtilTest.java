@@ -47,6 +47,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
+import net.iotgw.mail.util.PropUtil;
+
 /**
  * Test that the PropUtil methods return the correct values,
  * especially when defaults and non-String values are considered.

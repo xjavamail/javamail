@@ -1,6 +1,6 @@
-com.sun.mail.imap.IMAPProvider
-com.sun.mail.imap.IMAPSSLProvider
-com.sun.mail.smtp.SMTPProvider
-com.sun.mail.smtp.SMTPSSLProvider
-com.sun.mail.pop3.POP3Provider
-com.sun.mail.pop3.POP3SSLProvider
+net.iotgw.mail.imap.IMAPProvider
+net.iotgw.mail.imap.IMAPSSLProvider
+net.iotgw.mail.smtp.SMTPProvider
+net.iotgw.mail.smtp.SMTPSSLProvider
+net.iotgw.mail.pop3.POP3Provider
+net.iotgw.mail.pop3.POP3SSLProvider

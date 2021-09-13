@@ -59,6 +59,8 @@ import javax.mail.internet.MimeUtility;
 
 import com.sun.mail.test.TestServer;
 
+import net.iotgw.mail.imap.IMAPMessage;
+
 import org.junit.Test;
 import org.junit.Rule;
 import org.junit.rules.Timeout;

@@ -51,6 +51,8 @@ import javax.mail.search.*;
 
 import com.sun.mail.test.TestServer;
 
+import net.iotgw.mail.imap.YoungerTerm;
+
 import org.junit.Test;
 import org.junit.Rule;
 import org.junit.rules.Timeout;

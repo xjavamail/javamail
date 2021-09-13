@@ -41,25 +41,27 @@
 package javax.mail.internet;
 
 import javax.mail.MessagingException;
+
+import net.iotgw.mail.util.ASCIIUtility;
+import net.iotgw.mail.util.BASE64DecoderStream;
+import net.iotgw.mail.util.BASE64EncoderStream;
+import net.iotgw.mail.util.BEncoderStream;
+import net.iotgw.mail.util.LineInputStream;
+import net.iotgw.mail.util.LineOutputStream;
+import net.iotgw.mail.util.LogOutputStream;
+import net.iotgw.mail.util.PropUtil;
+import net.iotgw.mail.util.QDecoderStream;
+import net.iotgw.mail.util.QEncoderStream;
+import net.iotgw.mail.util.QPDecoderStream;
+import net.iotgw.mail.util.QPEncoderStream;
+import net.iotgw.mail.util.UUDecoderStream;
+import net.iotgw.mail.util.UUEncoderStream;
+
 import javax.mail.EncodingAware;
 import javax.activation.*;
 import java.util.*;
 import java.io.*;
 import java.nio.charset.Charset;
-import com.sun.mail.util.PropUtil;
-import com.sun.mail.util.ASCIIUtility;
-import com.sun.mail.util.BASE64DecoderStream;
-import com.sun.mail.util.BASE64EncoderStream;
-import com.sun.mail.util.BEncoderStream;
-import com.sun.mail.util.LineInputStream;
-import com.sun.mail.util.LineOutputStream;
-import com.sun.mail.util.LogOutputStream;
-import com.sun.mail.util.QDecoderStream;
-import com.sun.mail.util.QEncoderStream;
-import com.sun.mail.util.QPDecoderStream;
-import com.sun.mail.util.QPEncoderStream;
-import com.sun.mail.util.UUDecoderStream;
-import com.sun.mail.util.UUEncoderStream;
 
 /**
  * This is a utility class that provides various MIME related

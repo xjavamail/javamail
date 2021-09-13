@@ -46,11 +46,12 @@ import java.util.logging.Logger;
 import java.util.logging.Level;
 
 import javax.security.sasl.*;
-import javax.security.auth.callback.*;
 
-import com.sun.mail.util.BASE64EncoderStream;
-import com.sun.mail.util.BASE64DecoderStream;
-import com.sun.mail.util.ASCIIUtility;
+import net.iotgw.mail.util.ASCIIUtility;
+import net.iotgw.mail.util.BASE64DecoderStream;
+import net.iotgw.mail.util.BASE64EncoderStream;
+
+import javax.security.auth.callback.*;
 
 /**
  * Handle IMAP connection with SASL authentication.

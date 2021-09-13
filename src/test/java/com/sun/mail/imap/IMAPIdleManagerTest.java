@@ -57,6 +57,9 @@ import javax.mail.event.ConnectionEvent;
 
 import com.sun.mail.test.TestServer;
 
+import net.iotgw.mail.imap.IMAPStore;
+import net.iotgw.mail.imap.IdleManager;
+
 import org.junit.Test;
 import org.junit.Rule;
 import org.junit.rules.Timeout;

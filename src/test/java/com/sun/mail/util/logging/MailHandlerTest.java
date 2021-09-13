@@ -57,6 +57,13 @@ import javax.mail.Authenticator;
 import javax.mail.PasswordAuthentication;
 import javax.mail.internet.*;
 import org.junit.*;
+
+import net.iotgw.mail.util.logging.CollectorFormatter;
+import net.iotgw.mail.util.logging.CompactFormatter;
+import net.iotgw.mail.util.logging.LogManagerProperties;
+import net.iotgw.mail.util.logging.MailHandler;
+import net.iotgw.mail.util.logging.SeverityComparator;
+
 import static org.junit.Assert.*;
 
 /**

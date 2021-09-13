@@ -52,6 +52,8 @@ import javax.mail.UIDFolder;
 
 import com.sun.mail.test.TestServer;
 
+import net.iotgw.mail.imap.IMAPFolder;
+
 import org.junit.Test;
 import org.junit.Rule;
 import org.junit.rules.Timeout;

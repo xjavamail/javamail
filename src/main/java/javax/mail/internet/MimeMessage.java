@@ -46,13 +46,16 @@ import java.lang.*;
 import java.io.*;
 import java.util.*;
 import java.text.ParseException;
-import com.sun.mail.util.PropUtil;
-import com.sun.mail.util.ASCIIUtility;
-import com.sun.mail.util.MimeUtil;
-import com.sun.mail.util.MessageRemovedIOException;
-import com.sun.mail.util.FolderClosedIOException;
-import com.sun.mail.util.LineOutputStream;
+
 import javax.mail.util.SharedByteArrayInputStream;
+
+import net.iotgw.mail.pop3.POP3Message;
+import net.iotgw.mail.util.ASCIIUtility;
+import net.iotgw.mail.util.FolderClosedIOException;
+import net.iotgw.mail.util.LineOutputStream;
+import net.iotgw.mail.util.MessageRemovedIOException;
+import net.iotgw.mail.util.MimeUtil;
+import net.iotgw.mail.util.PropUtil;
 
 /**
  * This class represents a MIME style email message. It implements
@@ -132,7 +135,7 @@ public class MimeMessage extends Message implements MimePart {
      * The InternetHeaders object that stores the header
      * of this message.
      */
-    protected InternetHeaders headers;
+    protected InternetHeaders headers=null;
 
     /**
      * The Flags for this message. 
@@ -954,6 +957,7 @@ public class MimeMessage extends Message implements MimePart {
      */
     @Override
     public Date getReceivedDate() throws MessagingException {
+    	System.out.println(POP3Message.class.getName()+".getReceivedDate() - into");
 	return null;	
     }
 

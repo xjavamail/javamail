@@ -41,9 +41,11 @@
 package javax.mail.internet;
 
 import javax.mail.*;
+
+import net.iotgw.mail.util.PropUtil;
+
 import java.util.*;
 import java.io.*;
-import com.sun.mail.util.PropUtil;
 
 /**
  * This class represents a MIME ContentDisposition value. It provides

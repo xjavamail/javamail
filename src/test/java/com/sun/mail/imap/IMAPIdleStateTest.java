@@ -47,8 +47,9 @@ import java.util.concurrent.CountDownLatch;
 import javax.mail.Session;
 import javax.mail.Store;
 
-import com.sun.mail.imap.IMAPStore;
 import com.sun.mail.test.TestServer;
+
+import net.iotgw.mail.imap.IMAPStore;
 
 import org.junit.Test;
 import org.junit.Rule;

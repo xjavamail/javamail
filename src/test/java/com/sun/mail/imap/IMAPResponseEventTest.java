@@ -52,6 +52,8 @@ import javax.mail.event.StoreEvent;
 
 import com.sun.mail.test.TestServer;
 
+import net.iotgw.mail.imap.IMAPStore;
+
 import org.junit.Test;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;

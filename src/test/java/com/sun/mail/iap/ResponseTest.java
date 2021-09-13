@@ -46,6 +46,8 @@ import org.junit.Test;
 import org.junit.Rule;
 import org.junit.rules.Timeout;
 
+import net.iotgw.mail.iap.Response;
+
 /**
  * Test response parsing.
  */

@@ -44,7 +44,7 @@
 <probe-providers>
   <probe-provider moduleProviderName="glassfish" moduleName="javamail"
       probeProviderName="smtp-transport"
-      class="com.sun.mail.smtp.SMTPTransport">
+      class="net.iotgw.mail.smtp.SMTPTransport">
     <probe name="sendMessageStart">
       <method>sendMessageStart</method>
       <probe-param type="java.lang.String" name="subject" />
@@ -57,7 +57,7 @@
   </probe-provider>
   <probe-provider moduleProviderName="glassfish" moduleName="javamail"
       probeProviderName="iap-protocol"
-      class="com.sun.mail.iap.Protocol">
+      class="net.iotgw.mail.iap.Protocol">
     <probe name="commandStart">
       <method>commandStart</method>
       <probe-param type="java.lang.String" name="command" />
@@ -70,7 +70,7 @@
   </probe-provider>
   <probe-provider moduleProviderName="glassfish" moduleName="javamail"
       probeProviderName="pop3-protocol"
-      class="com.sun.mail.pop3.Protocol">
+      class="net.iotgw.mail.pop3.Protocol">
     <probe name="simpleCommandStart">
       <method>simpleCommandStart</method>
       <probe-param type="java.lang.String" name="command" />

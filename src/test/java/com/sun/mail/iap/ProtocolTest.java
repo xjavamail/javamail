@@ -45,6 +45,9 @@ import java.util.Properties;
 
 import com.sun.mail.test.NullOutputStream;
 
+import net.iotgw.mail.iap.Protocol;
+import net.iotgw.mail.iap.ProtocolException;
+
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 

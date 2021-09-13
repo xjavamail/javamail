@@ -52,8 +52,9 @@ import javax.mail.Message;
 import javax.mail.Part;
 import javax.mail.MessagingException;
 
-import com.sun.mail.util.ReadableMime;
 import com.sun.mail.test.TestServer;
+
+import net.iotgw.mail.util.ReadableMime;
 
 import org.junit.Test;
 import org.junit.BeforeClass;

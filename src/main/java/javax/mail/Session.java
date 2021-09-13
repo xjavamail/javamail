@@ -54,10 +54,11 @@ import java.util.Properties;
 import java.util.StringTokenizer;
 import java.util.ServiceLoader;
 import java.util.logging.Level;
-import java.util.concurrent.Executor;
 
-import com.sun.mail.util.LineInputStream;
-import com.sun.mail.util.MailLogger;
+import net.iotgw.mail.util.LineInputStream;
+import net.iotgw.mail.util.MailLogger;
+
+import java.util.concurrent.Executor;
 
 /**
  * The Session class represents a mail session and is not subclassed.
@@ -155,8 +156,8 @@ import com.sun.mail.util.MailLogger;
  * Here's an example of <code>META-INF/javamail.default.providers</code>
  * file contents:
  * <pre>
- * protocol=imap; type=store; class=com.sun.mail.imap.IMAPStore; vendor=Oracle;
- * protocol=smtp; type=transport; class=com.sun.mail.smtp.SMTPTransport; vendor=Oracle;
+ * protocol=imap; type=store; class=net.iotgw.mail.imap.IMAPStore; vendor=Oracle;
+ * protocol=smtp; type=transport; class=net.iotgw.mail.smtp.SMTPTransport; vendor=Oracle;
  * </pre><p>
  *
  * The current implementation also supports configuring providers using
@@ -1067,22 +1068,22 @@ public final class Session {
 	    logger.config("failed to load any providers, using defaults");
 	    // failed to load any providers, initialize with our defaults
 	    addProvider(new Provider(Provider.Type.STORE,
-			"imap", "com.sun.mail.imap.IMAPStore",
+			"imap", "net.iotgw.mail.imap.IMAPStore",
 			"Oracle", Version.version));
 	    addProvider(new Provider(Provider.Type.STORE,
-			"imaps", "com.sun.mail.imap.IMAPSSLStore",
+			"imaps", "net.iotgw.mail.imap.IMAPSSLStore",
 			"Oracle", Version.version));
 	    addProvider(new Provider(Provider.Type.STORE,
-			"pop3", "com.sun.mail.pop3.POP3Store",
+			"pop3", "net.iotgw.mail.pop3.POP3Store",
 			"Oracle", Version.version));
 	    addProvider(new Provider(Provider.Type.STORE,
-			"pop3s", "com.sun.mail.pop3.POP3SSLStore",
+			"pop3s", "net.iotgw.mail.pop3.POP3SSLStore",
 			"Oracle", Version.version));
 	    addProvider(new Provider(Provider.Type.TRANSPORT,
-			"smtp", "com.sun.mail.smtp.SMTPTransport",
+			"smtp", "net.iotgw.mail.smtp.SMTPTransport",
 			"Oracle", Version.version));
 	    addProvider(new Provider(Provider.Type.TRANSPORT,
-			"smtps", "com.sun.mail.smtp.SMTPSSLTransport",
+			"smtps", "net.iotgw.mail.smtp.SMTPSSLTransport",
 			"Oracle", Version.version));
 	}
 

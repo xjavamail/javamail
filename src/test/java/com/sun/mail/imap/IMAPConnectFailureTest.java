@@ -48,10 +48,10 @@ import javax.mail.Session;
 import javax.mail.Store;
 import javax.mail.MessagingException;
 
-import com.sun.mail.iap.ConnectionException;
-
 import com.sun.mail.test.TestServer;
-import com.sun.mail.util.MailConnectException;
+
+import net.iotgw.mail.iap.ConnectionException;
+import net.iotgw.mail.util.MailConnectException;
 
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;

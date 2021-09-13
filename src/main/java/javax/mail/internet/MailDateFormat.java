@@ -48,14 +48,15 @@ import java.util.Calendar;
 import java.util.Locale;
 import java.util.TimeZone;
 import java.util.logging.Level;
+
+import net.iotgw.mail.util.MailLogger;
+
 import java.text.DateFormatSymbols;
 import java.text.SimpleDateFormat;
 import java.text.NumberFormat;
 import java.text.FieldPosition;
 import java.text.ParsePosition;
 import java.text.ParseException;
-
-import com.sun.mail.util.MailLogger;
 
 /**
  * Formats and parses date specification based on

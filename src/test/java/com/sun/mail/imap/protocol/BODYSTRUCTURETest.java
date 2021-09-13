@@ -42,10 +42,14 @@ package com.sun.mail.imap.protocol;
 
 import javax.mail.internet.ParameterList;
 
-import com.sun.mail.iap.Response;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
+
+import net.iotgw.mail.iap.Response;
+import net.iotgw.mail.imap.protocol.BODYSTRUCTURE;
+import net.iotgw.mail.imap.protocol.FetchResponse;
+import net.iotgw.mail.imap.protocol.IMAPResponse;
 
 /**
  * Test the BODYSTRUCTURE class.

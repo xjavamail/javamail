@@ -46,6 +46,8 @@ import java.io.IOException;
 import static org.junit.Assert.fail;
 import org.junit.Test;
 
+import net.iotgw.mail.iap.ResponseInputStream;
+
 /**
  * Test ResponseInputStream.
  */

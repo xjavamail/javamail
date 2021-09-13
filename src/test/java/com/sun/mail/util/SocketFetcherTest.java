@@ -46,6 +46,10 @@ import java.util.Properties;
 import java.nio.charset.StandardCharsets;
 
 import com.sun.mail.test.TestServer;
+
+import net.iotgw.mail.util.BASE64DecoderStream;
+import net.iotgw.mail.util.SocketFetcher;
+
 import com.sun.mail.test.ProtocolHandler;
 
 import org.junit.Test;

@@ -41,9 +41,11 @@
 package com.sun.mail.util;
 
 import java.io.ByteArrayOutputStream;
-import com.sun.mail.util.QPEncoderStream;
 
 import org.junit.Test;
+
+import net.iotgw.mail.util.QPEncoderStream;
+
 import static org.junit.Assert.assertEquals;
 
 /**

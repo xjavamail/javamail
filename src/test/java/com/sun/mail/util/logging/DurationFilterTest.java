@@ -45,6 +45,9 @@ import java.util.Arrays;
 import java.util.Properties;
 import java.util.logging.*;
 import org.junit.*;
+
+import net.iotgw.mail.util.logging.DurationFilter;
+
 import static org.junit.Assert.*;
 
 /**

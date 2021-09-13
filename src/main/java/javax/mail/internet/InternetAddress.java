@@ -49,7 +49,8 @@ import java.util.StringTokenizer;
 import java.util.Locale;
 import java.nio.charset.StandardCharsets;
 import javax.mail.*;
-import com.sun.mail.util.PropUtil;
+
+import net.iotgw.mail.util.PropUtil;
 
 /**
  * This class represents an Internet email address using the syntax

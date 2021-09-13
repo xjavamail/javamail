@@ -49,6 +49,9 @@ import javax.mail.util.ByteArrayDataSource;
 import javax.xml.transform.stream.*;
 
 import org.junit.Test;
+
+import net.iotgw.mail.handlers.text_xml;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 

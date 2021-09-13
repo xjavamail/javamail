@@ -40,10 +40,12 @@
 
 package com.sun.mail.imap.protocol;
 
-import com.sun.mail.iap.ParsingException;
-
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
+
+import net.iotgw.mail.iap.ParsingException;
+import net.iotgw.mail.imap.protocol.IMAPResponse;
+import net.iotgw.mail.imap.protocol.Namespaces;
 
 /**
  * Test the Namespaces class.

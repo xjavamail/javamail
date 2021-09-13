@@ -46,9 +46,10 @@ import java.util.Properties;
 import javax.mail.Session;
 import javax.mail.Store;
 
-import com.sun.mail.imap.ReferralException;
-
 import com.sun.mail.test.TestServer;
+
+import net.iotgw.mail.imap.IMAPStore;
+import net.iotgw.mail.imap.ReferralException;
 
 import org.junit.Test;
 import org.junit.Rule;

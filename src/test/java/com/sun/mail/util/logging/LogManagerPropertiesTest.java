@@ -54,6 +54,9 @@ import java.util.logging.*;
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import org.junit.*;
+
+import net.iotgw.mail.util.logging.LogManagerProperties;
+
 import static org.junit.Assert.*;
 
 /**

@@ -43,6 +43,8 @@ package com.sun.mail.imap;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
+import net.iotgw.mail.imap.MessageCache;
+
 /**
  * Test the IMAP MessageCache.
  */

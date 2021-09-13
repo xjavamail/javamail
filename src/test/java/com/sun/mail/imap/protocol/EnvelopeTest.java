@@ -40,10 +40,13 @@
 
 package com.sun.mail.imap.protocol;
 
-import com.sun.mail.iap.Response;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 import org.junit.Test;
+
+import net.iotgw.mail.iap.Response;
+import net.iotgw.mail.imap.protocol.FetchResponse;
+import net.iotgw.mail.imap.protocol.IMAPResponse;
 
 /**
  * Test the ENVELOPE class.

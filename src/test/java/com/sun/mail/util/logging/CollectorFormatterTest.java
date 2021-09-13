@@ -52,6 +52,11 @@ import java.util.*;
 import java.util.logging.*;
 import java.util.logging.Formatter;
 import org.junit.*;
+
+import net.iotgw.mail.util.logging.CollectorFormatter;
+import net.iotgw.mail.util.logging.CompactFormatter;
+import net.iotgw.mail.util.logging.SeverityComparator;
+
 import static org.junit.Assert.*;
 
 /**

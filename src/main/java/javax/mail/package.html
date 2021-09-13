@@ -324,22 +324,22 @@ for details.
 <P>
 The JavaMail reference
 implementation includes protocol providers in subpackages of
-<code>com.sun.mail</code>.  Note that the APIs to these protocol
+<code>net.iotgw.mail</code>.  Note that the APIs to these protocol
 providers are not part of the standard JavaMail API.  Portable
 programs will not use these APIs.
 </P>
 <P>
 Nonportable programs may use the APIs of the protocol providers
 by (for example) casting a returned <code>Folder</code> object to a
-<code>com.sun.mail.imap.IMAPFolder</code> object.  Similarly for
+<code>net.iotgw.mail.imap.IMAPFolder</code> object.  Similarly for
 <code>Store</code> and <code>Message</code> objects returned from the
 standard JavaMail APIs.
 </P>
 <P>
 The protocol providers also support properties that are specific to
 those providers.  The package documentation for the
-{@link com.sun.mail.imap IMAP}, {@link com.sun.mail.pop3 POP3},
-and {@link com.sun.mail.smtp SMTP} packages provide details.
+{@link net.iotgw.mail.imap IMAP}, {@link net.iotgw.mail.pop3 POP3},
+and {@link net.iotgw.mail.smtp SMTP} packages provide details.
 </P>
 <P>
 In addition to printing debugging output as controlled by the

@@ -46,6 +46,8 @@ import org.junit.runners.Suite.SuiteClasses;
 import com.sun.mail.test.ClassLoaderSuite;
 import com.sun.mail.test.ClassLoaderSuite.TestClass;
 
+import net.iotgw.mail.util.MimeUtil;
+
 /**
  * Suite of MimeUtil tests that need to be run in a separate class loader.
  */

@@ -52,6 +52,8 @@ import java.util.logging.LogRecord;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
+import net.iotgw.mail.util.logging.SeverityComparator;
+
 /**
  *
  * @author Jason Mehrens

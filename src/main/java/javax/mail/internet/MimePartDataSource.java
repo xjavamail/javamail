@@ -41,11 +41,13 @@
 package javax.mail.internet;
 
 import javax.mail.*;
+
+import net.iotgw.mail.util.FolderClosedIOException;
+import net.iotgw.mail.util.PropUtil;
+
 import javax.activation.*;
 import java.io.*;
 import java.net.UnknownServiceException;
-import com.sun.mail.util.PropUtil;
-import com.sun.mail.util.FolderClosedIOException;
 
 /**
  * A utility class that implements a DataSource out of

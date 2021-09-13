@@ -59,6 +59,9 @@ import javax.net.ssl.*;
 import com.sun.mail.imap.IMAPHandler;
 import com.sun.mail.test.TestServer;
 import com.sun.mail.test.TestSocketFactory;
+
+import net.iotgw.mail.util.WriteTimeoutSocket;
+
 import com.sun.mail.test.TestSSLSocketFactory;
 
 import org.junit.Test;

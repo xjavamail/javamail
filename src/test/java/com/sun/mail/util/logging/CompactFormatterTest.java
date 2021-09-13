@@ -50,6 +50,10 @@ import java.util.logging.LogRecord;
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeUtility;
 import org.junit.*;
+
+import net.iotgw.mail.util.logging.CompactFormatter;
+import net.iotgw.mail.util.logging.LogManagerProperties;
+
 import static org.junit.Assert.*;
 
 /**

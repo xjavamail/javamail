@@ -46,9 +46,10 @@ import java.net.ServerSocket;
 import javax.mail.Session;
 import javax.mail.Transport;
 
-import com.sun.mail.util.MailConnectException;
-
 import org.junit.Test;
+
+import net.iotgw.mail.util.MailConnectException;
+
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;

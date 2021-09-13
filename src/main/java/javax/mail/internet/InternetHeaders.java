@@ -43,8 +43,9 @@ package javax.mail.internet;
 import java.io.*;
 import java.util.*;
 import javax.mail.*;
-import com.sun.mail.util.LineInputStream;
-import com.sun.mail.util.PropUtil;
+
+import net.iotgw.mail.util.LineInputStream;
+import net.iotgw.mail.util.PropUtil;
 
 /**
  * InternetHeaders is a utility class that manages RFC822 style

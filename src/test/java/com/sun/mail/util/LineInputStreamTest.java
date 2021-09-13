@@ -42,6 +42,9 @@ package com.sun.mail.util;
 
 import java.io.*;
 import org.junit.Test;
+
+import net.iotgw.mail.util.LineInputStream;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 

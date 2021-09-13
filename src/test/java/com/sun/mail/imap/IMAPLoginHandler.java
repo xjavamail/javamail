@@ -43,7 +43,7 @@ package com.sun.mail.imap;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
-import com.sun.mail.util.BASE64DecoderStream;
+import net.iotgw.mail.util.BASE64DecoderStream;
 
 /**
  * Handle IMAP connection with LOGIN authentication.

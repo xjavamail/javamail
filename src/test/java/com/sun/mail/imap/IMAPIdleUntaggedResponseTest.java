@@ -105,7 +105,7 @@ public final class IMAPIdleUntaggedResponseTest {
 		};
 		t.start();
 
-		((com.sun.mail.imap.IMAPFolder)folder).idle();
+		((net.iotgw.mail.imap.IMAPFolder)folder).idle();
 
 		assertEquals("message count", 1, folder.getMessageCount());
 

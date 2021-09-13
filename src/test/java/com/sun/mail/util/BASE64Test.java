@@ -45,6 +45,10 @@ import java.util.*;
 import javax.mail.*;
 
 import org.junit.Test;
+
+import net.iotgw.mail.util.BASE64DecoderStream;
+import net.iotgw.mail.util.BASE64EncoderStream;
+
 import org.junit.Assert;
 
 /**

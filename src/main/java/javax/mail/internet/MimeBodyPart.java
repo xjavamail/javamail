@@ -41,15 +41,17 @@
 package javax.mail.internet;
 
 import javax.mail.*;
+
+import net.iotgw.mail.util.ASCIIUtility;
+import net.iotgw.mail.util.FolderClosedIOException;
+import net.iotgw.mail.util.LineOutputStream;
+import net.iotgw.mail.util.MessageRemovedIOException;
+import net.iotgw.mail.util.MimeUtil;
+import net.iotgw.mail.util.PropUtil;
+
 import javax.activation.*;
 import java.io.*;
 import java.util.*;
-import com.sun.mail.util.PropUtil;
-import com.sun.mail.util.ASCIIUtility;
-import com.sun.mail.util.MimeUtil;
-import com.sun.mail.util.MessageRemovedIOException;
-import com.sun.mail.util.FolderClosedIOException;
-import com.sun.mail.util.LineOutputStream;
 
 /**
  * This class represents a MIME body part. It implements the 

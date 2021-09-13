@@ -46,9 +46,9 @@ import java.util.StringTokenizer;
 import java.util.logging.Level;
 import java.nio.charset.StandardCharsets;
 
-import com.sun.mail.util.BASE64EncoderStream;
-
 import com.sun.mail.test.ProtocolHandler;
+
+import net.iotgw.mail.util.BASE64EncoderStream;
 
 /**
  * Handle IMAP connection.

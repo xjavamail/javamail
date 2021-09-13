@@ -41,9 +41,11 @@
 package javax.mail.internet;
 
 import java.util.*;
+
+import net.iotgw.mail.util.ASCIIUtility;
+import net.iotgw.mail.util.PropUtil;
+
 import java.io.*;
-import com.sun.mail.util.PropUtil;
-import com.sun.mail.util.ASCIIUtility;
 
 /**
  * This class holds MIME parameters (attribute-value pairs).
@@ -155,7 +157,7 @@ public class ParameterList {
 	PropUtil.getBooleanSystemProperty("mail.mime.parameters.strict", true);
     private static final boolean splitLongParameters = 
 	PropUtil.getBooleanSystemProperty(
-	    "mail.mime.splitlongparameters", true);
+	    "mail.mime.splitlongparameters", false);
 
 
     /**
